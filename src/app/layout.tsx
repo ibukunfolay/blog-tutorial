@@ -1,6 +1,10 @@
+import Navbar from '@/components/navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import SessionProvider from '@/context';
+import { getServerSession } from 'next-auth';
+import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,14 +13,23 @@ export const metadata: Metadata = {
   description: 'Nextjs Blog with Sanity CMS',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+
+  const session = await getServerSession()
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <SessionProvider session={session}>
+      <body className={inter.className}>
+        <Navbar/>
+          {children}
+        <Footer/>
+      </body>
+      </SessionProvider>
     </html>
   )
 }
