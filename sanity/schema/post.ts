@@ -24,17 +24,6 @@ const post = {
 			type: "reference",
 			to: [{ type: "user" }],
 		},
-		{
-			name: "likes",
-			title: "Likes",
-			type: "array",
-			of: [
-				{
-					type: "reference",
-					to: [{ type: "user" }],
-				},
-			],
-		},
 	],
 };
 

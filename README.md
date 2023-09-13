@@ -49,7 +49,6 @@ The default dataset configuration has a public dataset named "production".
 
 \*zustand
 next-auth
-@dhaiwat10/react-link-preview
 
 ## folder structure
 
@@ -96,9 +95,20 @@ remember add callback link to gcp origin
 
 ## build sanity schemas for user and post
 
+in the sanity folder at the root
+
+## configure sanity api (cors and token)
+
 ps: create sanity token from /admin manage
 
-in the sanity folder at the root
+## manually add data to sanity
+
+# fetch data from sanity to homepage
+
+--create groq fetch query
+-- create preview component and pass into home page
+
+ps: next js image file.
 
 ## implement authentication with zustand
 
