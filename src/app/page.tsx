@@ -9,7 +9,6 @@ interface HomeProps {
 const Home: FC<HomeProps> = async ({  }) => {
   
   const posts = await getAllPosts()
-  console.log(posts)
 
   return (
     <div>
