@@ -49,19 +49,66 @@ The default dataset configuration has a public dataset named "production".
 
 \*zustand
 next-auth
-@dhaiwat10/react-link-preview
 
 ## folder structure
 
-## build sanity schemas for user and post
+replace the page.tsx file in the app dir with the code below:
+
+<!--import React, { FC } from 'react'
+
+interface HomeProps {
+
+}
+
+const Home: FC<HomeProps> = ({  }) => {
+  return (
+    <div>
+     Home
+    </div>
+  )
+}
+
+export default Home; -->
 
 ## setup google oauth provider
 
 - configure client on gcp
+- add to env file
 
-## build navbar
+## build navbar and footer
 
 - add signin button and logout function
+  -context for session provider
+
+## setup google login using next-auth
+
+-- authoptions in lib folder
+-- next-auth api route
+
+ps: test route
+http://localhost:3000/api/auth/signin
+
+ps: view providers
+http://localhost:3000/api/auth/providers
+
+remember add callback link to gcp origin
+
+## build sanity schemas for user and post
+
+in the sanity folder at the root
+
+## configure sanity api (cors and token)
+
+ps: create sanity token from /admin manage
+
+## manually add data to sanity
+
+# fetch data from sanity to homepage
+
+--create groq fetch query
+-- create preview component and pass into home page
+
+ps: next js image file.
 
 ## implement authentication with zustand
 
