@@ -8,6 +8,10 @@ export async function getAllPosts() {
         title,
         description,
         url,
-        postedBy
+        postedBy->{
+            _id,
+            name,
+            image
+          },
     }`);
 }

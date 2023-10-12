@@ -2,9 +2,8 @@ import Navbar from '@/components/navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import SessionProvider from '@/context';
-import { getServerSession } from 'next-auth';
 import Footer from '@/components/footer';
+import Providers from '@/context';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,17 +18,15 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
 
-  const session = await getServerSession()
-
   return (
     <html lang="en">
-      <SessionProvider session={session}>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
+      <Providers>
         <Navbar/>
           {children}
         <Footer/>
+      </Providers>
       </body>
-      </SessionProvider>
     </html>
   )
 }

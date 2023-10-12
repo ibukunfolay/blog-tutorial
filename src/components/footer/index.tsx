@@ -6,7 +6,7 @@ interface FooterProps {
 
 const Footer: FC<FooterProps> = ({  }) => {
   return (
-    <div className='absolute bottom-0 min-h-16'>Footer</div>
+    <div className='shadow-md w-full flex justify-center items-center min-h-[5em]'>&copy; Tech writers blog 2021.</div>
   )
 }
 
